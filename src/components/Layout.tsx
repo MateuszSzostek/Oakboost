@@ -1,6 +1,13 @@
 import React from "react"
+import Head from "./Head"
+
 const Layout = ({ children }) => {
-  return <div>{children}</div>
+  return (
+    <>
+      <Head />
+      <div>{children}</div>
+    </>
+  )
 }
 
 export default Layout
