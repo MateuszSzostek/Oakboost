@@ -4,3 +4,8 @@ export interface IHeadProps {
   keywords?: string
   author?: string
 }
+
+export interface IButtonProps {
+  isAnimated?: boolean
+  slug?: string
+}

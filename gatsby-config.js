@@ -7,6 +7,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/, // See below to configure properly
+        },
+      },
+    },
+    {
       resolve: "gatsby-plugin-anchor-links",
       options: {
         offset: -100,
