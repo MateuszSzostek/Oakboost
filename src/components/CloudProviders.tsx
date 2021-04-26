@@ -9,7 +9,7 @@ const CloudProviders = () => {
           Boost your application with <br />
           trusted cloud ecosystems
         </h2>
-        <div className="grid-cloud-providers-container">
+        <div className="grid-triple-container">
           {CloudProvidersData.map(s => (
             <div className="flex-center" key={s.id}>
               <img src={s.image} alt={s.alt}></img>
