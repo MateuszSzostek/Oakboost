@@ -9,3 +9,7 @@ export interface IButtonProps {
   isAnimated?: boolean
   slug?: string
 }
+
+export interface IFormButtonProps {
+  slug?: string
+}

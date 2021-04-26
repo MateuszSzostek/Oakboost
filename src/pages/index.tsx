@@ -5,6 +5,7 @@ import Features from "../components/Features"
 import TechCase from "../components/TechCase"
 import Mentorship from "../components/Mentorship"
 import CloudProviders from "../components/CloudProviders"
+import Contact from "../components/Contact"
 import "../css/styles.min.css"
 
 const IndexPage = () => {
@@ -15,6 +16,7 @@ const IndexPage = () => {
       <TechCase />
       <Mentorship />
       <CloudProviders />
+      <Contact />
     </Layout>
   )
 }
