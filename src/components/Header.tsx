@@ -1,9 +1,38 @@
 import * as React from "react"
+import { useState, useEffect } from "react"
 import Icon from "../data/images/logo.svg"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import Button from "./Button"
+import { Icon as Iconify } from "@iconify/react"
+import crossIcon from "@iconify-icons/akar-icons/cross"
+import menuAlt3 from "@iconify-icons/heroicons-outline/menu-alt-3"
 
 const Header = () => {
+  const [menuActive, setMenuActive] = useState<boolean>(false)
+
+  const getWidth = () => {
+    return Math.max(
+      document.documentElement.clientWidth || 0,
+      window.innerWidth || 0
+    )
+  }
+
+  const toggleMenu = () => {
+    if (getWidth() < 1140) {
+      setMenuActive(!menuActive)
+    }
+  }
+
+  useEffect(() => {
+    const resizeListener = () => {
+      setMenuActive(false)
+    }
+    window.addEventListener("resize", resizeListener)
+    return () => {
+      window.removeEventListener("resize", resizeListener)
+    }
+  }, [])
+
   return (
     <header>
       <section className="header-section">
@@ -22,11 +51,47 @@ const Header = () => {
             <AnchorLink className="nav-item" to="/#mentoring">
               Mentoring
             </AnchorLink>
+            <AnchorLink className="nav-item" to="/#mentoring">
+              Blog
+            </AnchorLink>
           </div>
           <div className="desktop-element">
             <Button slug={"/"} isAnimated={true}>
               Get In Touch
             </Button>
+          </div>
+          <div onClick={toggleMenu} className="mob-element">
+            <Iconify
+              className="menu-button"
+              icon={menuActive ? crossIcon : menuAlt3}
+            ></Iconify>
+          </div>
+          <div className={"mob-nav-container " + (menuActive ? "on" : "off")}>
+            <div className="mob-nav">
+              <AnchorLink className="mob-nav-item" to="/#services">
+                Services
+              </AnchorLink>
+              <AnchorLink className="mob-nav-item" to="/#case-study">
+                Case Study
+              </AnchorLink>
+              <AnchorLink className="mob-nav-item" to="/#mentoring">
+                Mentoring
+              </AnchorLink>
+              <AnchorLink className="mob-nav-item" to="/#mentoring">
+                Blog
+              </AnchorLink>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  padding: "10px 0px 15px 20px",
+                }}
+              >
+                <Button slug={"/"} isAnimated={true}>
+                  Get In Touch
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

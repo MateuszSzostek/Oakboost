@@ -4,7 +4,6 @@ import { LandingBubbles } from "../data/bubbles"
 import Underline from "./Underline"
 
 const Landing = () => {
-  console.log(LandingBubbles)
   return (
     <section id="landing" className="landing-section">
       <div className="landing-container">

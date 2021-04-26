@@ -14,7 +14,7 @@ export const CloudProvidersData = [
     alt: "Azure provider",
   },
   {
-    id: 2,
+    id: 3,
     image: Kubernetes,
     alt: "Kubernates",
   },

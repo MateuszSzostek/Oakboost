@@ -14,7 +14,6 @@ interface IBubbleProps {
 
 const Bubbles = (props: IBubbleProps) => {
   const { bubbles } = props
-  console.log(bubbles)
   return (
     <div className="bubbles-container">
       {bubbles.map(s => (

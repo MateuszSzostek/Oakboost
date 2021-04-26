@@ -18,7 +18,7 @@ const FeatureCol = (props: IFeatureCol) => {
       <h2 className="feature-title">{data.title}</h2>
       <ul>
         {data.listItem.map(s => (
-          <li data-Icon="%" className="feature-item" key={s.id}>
+          <li className="feature-item" key={s.id}>
             <img className="gray-indicator" src={Arrow} alt="indicator"></img>
             {s.name}
           </li>

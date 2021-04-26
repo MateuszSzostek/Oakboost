@@ -27,6 +27,9 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "@iconify-icons/akar-icons": "^1.1.9",
+    "@iconify-icons/heroicons-outline": "^1.1.2",
+    "@iconify/react": "^1.1.4",
     "prettier": "^2.2.1"
   },
   "keywords": [
