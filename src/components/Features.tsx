@@ -2,6 +2,8 @@ import React from "react"
 import Button from "./Button"
 import FeatureCol from "./FeatureCol"
 import { FeaturesData } from "../data/features"
+import Bubbles from "./Bubbles"
+import { TechnologyBubbles } from "../data/bubbles"
 
 interface IFeatureCol {
   feature: {
@@ -29,6 +31,7 @@ const Features = () => {
             </Button>
           </div>
         </div>
+        <Bubbles bubbles={TechnologyBubbles}></Bubbles>
       </div>
     </section>
   )
