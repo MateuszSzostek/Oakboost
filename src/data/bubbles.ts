@@ -9,6 +9,9 @@ import TechnologyBubble_3 from "../data/images/technology_bubbles/bubble_3.svg"
 import TechnologyBubble_4 from "../data/images/technology_bubbles/bubble_4.svg"
 import TechnologyBubble_5 from "../data/images/technology_bubbles/bubble_5.svg"
 
+import MentorshipBubble_1 from "../data/images/mentoring_bubbles/bubble_1.svg"
+import MentorshipBubble_2 from "../data/images/mentoring_bubbles/bubble_2.svg"
+
 export const LandingBubbles = [
   {
     id: 1,
@@ -93,5 +96,26 @@ export const TechnologyBubbles = [
     top: "250px",
     bottom: null,
     zIndex: 6,
+  },
+]
+
+export const MentorshipBubbles = [
+  {
+    id: 1,
+    img: MentorshipBubble_1,
+    left: "-250px",
+    right: null,
+    top: "250px",
+    bottom: null,
+    zIndex: 4,
+  },
+  {
+    id: 2,
+    img: MentorshipBubble_2,
+    left: "-300px",
+    right: null,
+    top: "400px",
+    bottom: null,
+    zIndex: 5,
   },
 ]

@@ -2,7 +2,7 @@ import React from "react"
 import Arrow from "../data/images/arrow.svg"
 
 interface IFeatureCol {
-  feature: {
+  data: {
     title: string
     listItem: {
       id: number
@@ -12,12 +12,12 @@ interface IFeatureCol {
 }
 
 const FeatureCol = (props: IFeatureCol) => {
-  const { feature } = props
+  const { data } = props
   return (
     <div className="">
-      <h2 className="feature-title">{feature.title}</h2>
+      <h2 className="feature-title">{data.title}</h2>
       <ul>
-        {feature.listItem.map(s => (
+        {data.listItem.map(s => (
           <li data-Icon="%" className="feature-item" key={s.id}>
             <img className="gray-indicator" src={Arrow} alt="indicator"></img>
             {s.name}

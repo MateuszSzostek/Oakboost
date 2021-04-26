@@ -1,5 +1,6 @@
 export const FeaturesData = [
   {
+    id: 1,
     title: "Cloud Native",
     listItem: [
       {
@@ -17,6 +18,7 @@ export const FeaturesData = [
     ],
   },
   {
+    id: 2,
     title: "Artifical Inteligence",
     listItem: [
       {
@@ -34,6 +36,7 @@ export const FeaturesData = [
     ],
   },
   {
+    id: 3,
     title: "Internet of Things",
     listItem: [
       {
