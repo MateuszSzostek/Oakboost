@@ -5,7 +5,7 @@ import Underline from "./Underline"
 
 const TechCase = () => {
   return (
-    <section className="radial-gradient">
+    <section id="case-study" className="radial-gradient">
       <div className="tech-case-container">
         <h2 className="tech-case-title">
           See how we help our clients <br /> accomplish their vision

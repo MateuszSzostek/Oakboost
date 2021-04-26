@@ -7,7 +7,7 @@ import { MentorshipBubbles } from "../data/bubbles"
 
 const Mentorship = () => {
   return (
-    <section>
+    <section id="mentoring">
       <div className="features-container">
         <h2 className="mentoring-title">
           Building impactful software requires expertise. <br />

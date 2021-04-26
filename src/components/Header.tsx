@@ -8,10 +8,10 @@ const Header = () => {
     <header>
       <section className="header-section">
         <div className="header-container">
-          <div className="logo-container">
+          <AnchorLink to="/#landing" className="logo-container">
             <img src={Icon}></img>
             <h1 className="logo-text">Oak Boost</h1>
-          </div>
+          </AnchorLink>
           <div className="desktop-element">
             <AnchorLink className="nav-item" to="/#services">
               Services

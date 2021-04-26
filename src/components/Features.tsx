@@ -17,7 +17,7 @@ interface IFeatureCol {
 
 const Features = () => {
   return (
-    <section>
+    <section id="services">
       <div className="features-container">
         <div className="grid-feature-container">
           {FeaturesData.map(s => (

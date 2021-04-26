@@ -6,7 +6,7 @@ import Underline from "./Underline"
 const Landing = () => {
   console.log(LandingBubbles)
   return (
-    <section className="landing-section">
+    <section id="landing" className="landing-section">
       <div className="landing-container">
         <h1 className="landing-title">
           Boost your most <br /> significant teams
