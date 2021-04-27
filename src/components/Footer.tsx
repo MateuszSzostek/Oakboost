@@ -3,8 +3,8 @@ import React from "react"
 const Footer = () => {
   return (
     <section className="radial-gradient">
-      <footer>
-        <div className="footer-container">
+      <div className="footer-container">
+        <footer>
           <address>
             <div className="grid-triple-container">
               <div>
@@ -53,8 +53,8 @@ const Footer = () => {
             <div>Copytight</div>
             <div>Part of Oakfusion Group</div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </section>
   )
 }

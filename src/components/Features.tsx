@@ -5,16 +5,6 @@ import { FeaturesData } from "../data/features"
 import Bubbles from "./Bubbles"
 import { TechnologyBubbles } from "../data/bubbles"
 
-interface IFeatureCol {
-  feature: {
-    title: string
-    listItem: {
-      id: number
-      name: string
-    }[]
-  }
-}
-
 const Features = () => {
   return (
     <section id="services">

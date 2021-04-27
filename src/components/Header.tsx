@@ -4,6 +4,7 @@ import Icon from "../data/images/logo.svg"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import Button from "./Button"
 import { Icon as Iconify } from "@iconify/react"
+import { NavData } from "../data/nav"
 import crossIcon from "@iconify-icons/akar-icons/cross"
 import menuAlt3 from "@iconify-icons/heroicons-outline/menu-alt-3"
 
@@ -42,18 +43,11 @@ const Header = () => {
             <h1 className="logo-text">Oak Boost</h1>
           </AnchorLink>
           <div className="desktop-element">
-            <AnchorLink className="nav-item" to="/#services">
-              Services
-            </AnchorLink>
-            <AnchorLink className="nav-item" to="/#case-study">
-              Case Study
-            </AnchorLink>
-            <AnchorLink className="nav-item" to="/#mentoring">
-              Mentoring
-            </AnchorLink>
-            <AnchorLink className="nav-item" to="/#mentoring">
-              Blog
-            </AnchorLink>
+            {NavData.map(s => (
+              <AnchorLink key={s.id} className="nav-item" to={s.slug}>
+                {s.name}
+              </AnchorLink>
+            ))}
           </div>
           <div className="desktop-element">
             <Button slug={"/"} isAnimated={true}>
@@ -68,18 +62,16 @@ const Header = () => {
           </div>
           <div className={"mob-nav-container " + (menuActive ? "on" : "off")}>
             <div className="mob-nav">
-              <AnchorLink className="mob-nav-item" to="/#services">
-                Services
-              </AnchorLink>
-              <AnchorLink className="mob-nav-item" to="/#case-study">
-                Case Study
-              </AnchorLink>
-              <AnchorLink className="mob-nav-item" to="/#mentoring">
-                Mentoring
-              </AnchorLink>
-              <AnchorLink className="mob-nav-item" to="/#mentoring">
-                Blog
-              </AnchorLink>
+              {NavData.map(s => (
+                <AnchorLink
+                  onAnchorLinkClick={toggleMenu}
+                  key={s.id}
+                  className="mob-nav-item"
+                  to={s.slug}
+                >
+                  {s.name}
+                </AnchorLink>
+              ))}
               <div
                 style={{
                   display: "flex",

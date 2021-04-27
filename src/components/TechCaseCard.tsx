@@ -1,4 +1,5 @@
 import React from "react"
+import WhiteArrow from "../data/images/whiteArrow.svg"
 
 interface ITechCaseCardProps {
   techCaseProps: {
@@ -17,10 +18,16 @@ const TechCaseCard = (props: ITechCaseCardProps) => {
           <h3 className="tech-case-title">{title}</h3>
           <p className="tech-case-description">{description}</p>
         </div>
-      </div>
-      <img className="tech-case-image" src={image}></img>
-      <div className="tech-case-link">
-        <div className="white-indicator"></div>
+        <div className="mob-tech-img">
+          <img className="tech-case-image" src={image}></img>
+          <div className="tech-case-link">
+            <img
+              className="white-indicator"
+              src={WhiteArrow}
+              alt="indicator"
+            ></img>
+          </div>
+        </div>
       </div>
     </div>
   )

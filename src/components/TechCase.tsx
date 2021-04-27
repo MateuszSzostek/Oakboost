@@ -1,7 +1,6 @@
 import React from "react"
 import TechCaseCard from "./TechCaseCard"
 import { TechCaseData } from "../data/techcase"
-import Underline from "./Underline"
 
 const TechCase = () => {
   return (
