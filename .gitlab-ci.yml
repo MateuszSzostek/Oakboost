@@ -1,0 +1,35 @@
+stages:
+  - build
+  - build-docker
+variables:
+  CONTAINER_TEST_IMAGE: $CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME
+  CONTAINER_RELEASE_IMAGE: $CI_REGISTRY_IMAGE:latest
+
+build-prod:
+  image: node:lts
+  stage: build
+  script:
+    - npm install
+    - ./node_modules/.bin/gatsby build
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+
+build-docker-develop-prod:
+  image: docker:latest
+  stage: build-docker
+  only:
+    refs:
+      - master
+  before_script:
+    - docker info
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+  services:
+    - docker:19.03.5-dind
+  script:
+    - BUILD_IMAGE_NAME=$CI_REGISTRY_IMAGE:oakboost
+    - docker build --pull --force-rm=true -t "$BUILD_IMAGE_NAME" .
+    - docker push "$BUILD_IMAGE_NAME"
+  when: manual
