@@ -50,7 +50,6 @@ module.exports = {
         icon: `src/data/images/icon.svg`,
       },
     },
-    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
