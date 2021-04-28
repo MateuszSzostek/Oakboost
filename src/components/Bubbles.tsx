@@ -1,16 +1,5 @@
 import React from "react"
-
-interface IBubbleProps {
-  bubbles: {
-    id: number
-    img: string
-    left?: string
-    right?: string
-    top?: string
-    bottom?: string
-    zIndex?: number
-  }[]
-}
+import { IBubbleProps } from "../helpers/helpers"
 
 const Bubbles = (props: IBubbleProps) => {
   const { bubbles } = props

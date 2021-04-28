@@ -17,6 +17,6 @@ export const NavData = [
   {
     id: 4,
     name: "Blog",
-    slug: "/#landing",
+    slug: "/blog",
   },
 ]

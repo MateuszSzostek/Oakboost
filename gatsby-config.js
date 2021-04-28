@@ -10,7 +10,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/, // See below to configure properly
+          include: /assets/,
         },
       },
     },
@@ -27,6 +27,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/data/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `md_posts`,
+        path: `${__dirname}/src/data/md_posts`,
       },
     },
     `gatsby-transformer-sharp`,

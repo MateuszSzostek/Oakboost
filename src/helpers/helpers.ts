@@ -13,3 +13,21 @@ export interface IButtonProps {
 export interface IFormButtonProps {
   slug?: string
 }
+
+export interface IPostCardProps {
+  title: string
+  slug: string
+  shortDesc: string
+}
+
+export interface IBubbleProps {
+  bubbles: {
+    id: number
+    img: string
+    left?: string
+    right?: string
+    top?: string
+    bottom?: string
+    zIndex?: number
+  }[]
+}
