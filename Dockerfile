@@ -1,11 +1,4 @@
-FROM node:14.16.1-alpine3.13
+FROM nginx:alpine
+COPY ./public/ /usr/share/nginx/html
 
-RUN mkdir /app
-
-WORKDIR /app
-
-COPY . .
-
-EXPOSE 8001
-
-CMD "npm" "start"
+EXPOSE 8003

@@ -14,7 +14,7 @@ const Landing = () => {
           Enterprises team up with Oak Boost to succeed with their <br /> most
           pivotal applications using disruptive technologies.
         </h2>
-        <Underline />
+        <Underline width={"930px"} />
         <Buubles bubbles={LandingBubbles} />
       </div>
     </section>

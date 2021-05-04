@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: ``,
   siteMetadata: {
     title: `OakBoost`,
     description: `OakBoost description.`,

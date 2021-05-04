@@ -1,5 +1,6 @@
 import React from "react"
 import { CloudProvidersData } from "../data/cloud_providers"
+import Underline from "./Underline"
 
 const CloudProviders = () => {
   return (
@@ -9,6 +10,7 @@ const CloudProviders = () => {
           Boost your application with <br />
           trusted cloud ecosystems
         </h2>
+        <Underline width={"434px"} height={"5px"} />
         <div className="grid-triple-container">
           {CloudProvidersData.map(s => (
             <div className="flex-center" key={s.id}>
