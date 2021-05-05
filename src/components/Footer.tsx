@@ -19,7 +19,7 @@ const Footer = () => {
                 </p>
               </div>
               <div>
-                <h3 className="">Northern Europe</h3>
+                <h3 className="">Western Europe</h3>
                 <p>
                   c/o Impact Hub Vienna
                   <br />
@@ -35,7 +35,7 @@ const Footer = () => {
                 </p>
               </div>
               <div>
-                <h3 className="">Western Europe</h3>
+                <h3 className="">Northern Europe</h3>
                 <p>
                   Anckargripsgatan 3<br />
                   211 19-SE Malmö Sweden

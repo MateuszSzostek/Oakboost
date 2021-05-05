@@ -30,8 +30,8 @@ const Contact = () => {
               </div>
             </form>
           </div>
+          <Bubbles bubbles={ContactBubbles}></Bubbles>
         </div>
-        <Bubbles bubbles={ContactBubbles}></Bubbles>
       </div>
     </section>
   )
